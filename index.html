@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Football Auction 2026</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>⚽ FOOTBALL AUCTION 2026</h1>
+
+</header>
+
+<div class="container">
+
+    <!-- ================= CURRENT PLAYER ================= -->
+
+    <div class="player-card">
+
+        <h2>Current Player</h2>
+
+        <img id="playerImage"
+            src="https://via.placeholder.com/220"
+            alt="Player">
+
+        <h2 id="playerName">Loading...</h2>
+
+        <p id="playerPosition"></p>
+
+        <p id="playerPrice"></p>
+
+        <div class="bid-section">
+
+            <label for="bidAmount">Final Bid (Cr)</label>
+
+            <input
+                type="number"
+                id="bidAmount"
+                value="1"
+                min="1"
+                class="bidInput">
+
+        </div>
+
+    </div>
+
+    <!-- ================= BUTTONS ================= -->
+
+    <div class="buttons">
+
+        <button onclick="assignPlayer('Team A')">
+            Team A
+        </button>
+
+        <button onclick="assignPlayer('Team B')">
+            Team B
+        </button>
+
+        <button onclick="assignPlayer('Team C')">
+            Team C
+        </button>
+
+        <button onclick="assignPlayer('Team D')">
+            Team D
+        </button>
+
+        <button class="unsold"
+            onclick="unsoldPlayer()">
+            Unsold
+        </button>
+
+    </div>
+
+    <!-- ================= TEAMS ================= -->
+
+    <div class="teams">
+
+        <!-- TEAM A -->
+
+        <div class="team">
+
+            <h2>🟦 Team A</h2>
+
+            <div class="stats">
+
+                <p>
+                    💰 Budget Left
+                    <span id="budgetA">100</span> Cr
+                </p>
+
+                <p>
+                    💸 Money Spent
+                    <span id="spentA">0</span> Cr
+                </p>
+
+                <p>
+                    👥 Players Bought
+                    <span id="countA">0</span>
+                </p>
+
+            </div>
+
+            <hr>
+
+            <ul id="teamA"></ul>
+
+        </div>
+
+        <!-- TEAM B -->
+
+        <div class="team">
+
+            <h2>🟥 Team B</h2>
+
+            <div class="stats">
+
+                <p>
+                    💰 Budget Left
+                    <span id="budgetB">100</span> Cr
+                </p>
+
+                <p>
+                    💸 Money Spent
+                    <span id="spentB">0</span> Cr
+                </p>
+
+                <p>
+                    👥 Players Bought
+                    <span id="countB">0</span>
+                </p>
+
+            </div>
+
+            <hr>
+
+            <ul id="teamB"></ul>
+
+        </div>
+
+        <!-- TEAM C -->
+
+        <div class="team">
+
+            <h2>🟩 Team C</h2>
+
+            <div class="stats">
+
+                <p>
+                    💰 Budget Left
+                    <span id="budgetC">100</span> Cr
+                </p>
+
+                <p>
+                    💸 Money Spent
+                    <span id="spentC">0</span> Cr
+                </p>
+
+                <p>
+                    👥 Players Bought
+                    <span id="countC">0</span>
+                </p>
+
+            </div>
+
+            <hr>
+
+            <ul id="teamC"></ul>
+
+        </div>
+
+        <!-- TEAM D -->
+
+        <div class="team">
+
+            <h2>🟨 Team D</h2>
+
+            <div class="stats">
+
+                <p>
+                    💰 Budget Left
+                    <span id="budgetD">100</span> Cr
+                </p>
+
+                <p>
+                    💸 Money Spent
+                    <span id="spentD">0</span> Cr
+                </p>
+
+                <p>
+                    👥 Players Bought
+                    <span id="countD">0</span>
+                </p>
+
+            </div>
+
+            <hr>
+            <ul id="teamD"></ul>
+
+        </div>
+
+        <!-- UNSOLD -->
+
+        <div class="team unsold-card">
+
+            <h2>❌ Unsold Players</h2>
+
+            <ul id="unsoldList"></ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
